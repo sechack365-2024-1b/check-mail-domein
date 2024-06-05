@@ -1,0 +1,26 @@
+services:
+  front:
+    build:
+      dockerfile: ./front/Dockerfile
+    tty: true
+    volumes:
+      - ./front/src:/app
+    environment:
+      - WATCHPACK_POLLING=true
+    command: sh -c "npm run dev"
+    ports:
+      - "3000:3000"
+     
+  back:
+    container_name: back
+    build:
+      dockerfile: ./back/Dockerfile
+    volumes:
+      - ./back/:/usr/src/app
+    ports:
+      - "8000:8000"
+    networks:
+      - default
+       
+    tty: true
+    restart: always
