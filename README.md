@@ -6,5 +6,5 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
 # Getting Started
-- git clone https://github.com/sechack365-2024-1b/check-mail-domein.git
+- `git clone https://github.com/sechack365-2024-1b/check-mail-domein.git`
 - `docker compose up`
